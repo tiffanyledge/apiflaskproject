@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Wanted people from Interpol</title>
+    </html>
+    <body>
+        <h1>Wanted people from Interpol</h1>
+        <p></p>
+        {% for criminal in criminals %}
+            <p>{{criminal['name']}}</p>
+            <p>{{criminal['charges']}}</p>
+        {% endfor %}
+
+    </body>
+
