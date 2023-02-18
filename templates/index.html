@@ -1,15 +1,32 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
-      <title>Wanted people from Interpol</title>
-    </html>
+        <title>Wanted people from Interpol</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">           
+      </html>
     <body>
         <h1>Wanted people from Interpol</h1>
-        <p></p>
-        {% for criminal in criminals %}
-            <p>{{criminal['name']}}</p>
-            <p>{{criminal['charges']}}</p>
-        {% endfor %}
+       
+        <!-- <img class="logo" src = https://o.remove.bg/downloads/3052282a-7626-4b8b-879b-d683052d3534/image-removebg-preview.png> -->
 
+        <div class="container">
+            {% for criminal in criminals %}
+                <div class="card">
+                    <div class="images">
+                        <img src= {{criminal['id']}} >
+                    </div>
+                    <div class="information">    
+                        <p>{{criminal['name']}}</p>
+                        <p>{{criminal['dob']}}</p>
+                        <p>{{criminal['charges']}}</p>
+                <!-- <p>{{criminal['pic']}}</p> -->
+                    </div>
+                </div>
+            {% endfor %}
+        </div>    
     </body>
 
