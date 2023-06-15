@@ -9,35 +9,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">           
       </html>
     <body>
-        <div class="title_bar">
-            <a href="/home"> The Interpol Net</a>
-        </div>
-        <div class="topic_name">
-            <h1>Wanted List from Interpol</h1>
-        </div>
-        
+        <h1>Wanted people from Interpol</h1>
        
         <!-- <img class="logo" src = https://o.remove.bg/downloads/3052282a-7626-4b8b-879b-d683052d3534/image-removebg-preview.png> -->
 
         <div class="container">
-            {% for criminal in criminals %}
+            {% for missin in missing %}
                 <div class="card">
-                    <div class="images">
-                        <!-- <img src={{criminal['id']}}> -->
-                        <img src={{criminal['id']}}>
-                    </div>
+                    <!-- <div class="images">
+                        <img src= {{criminal['id']}} >
+                    </div> -->
                     <div class="information">    
-                        <p>{{criminal['name']}}</p>
-                        <p>{{criminal['dob']}}</p>
-                        <p>{{criminal['charges']}}</p>
-                <!-- <p>{{criminal['pic']}}</p> -->
+                        <p>{{missin['name']}}</p>
                     </div>
                 </div>
             {% endfor %}
         </div>    
-        <!-- <div class="link">
-            <a href="/"> yellow noti</a>
-        </div> -->
-        
     </body>
 
