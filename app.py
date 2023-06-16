@@ -31,7 +31,7 @@ def index():
         response1 = requests.get(data['_embedded']['notices'][x]['_links']['images']['href'])
         
         criminal['pic'] = data['_embedded']['notices'][x]['entity_id']
-        criminal['id'] = response1.json()['_embedded']['notices'][x]['_links']['images']['href']
+        criminal['id'] = data['_embedded']['notices'][x]['_links']['images']['href']
         criminal['dob'] = data['_embedded']['notices'][x]['date_of_birth']
         criminals.append(criminal)
 
